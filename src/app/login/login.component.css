@@ -1,0 +1,39 @@
+
+.login {
+  width: 400px;
+  margin: 16px auto;
+  font-size: 16px;
+}
+
+.login p {
+  margin-top: 0;
+  margin-bottom: 0;
+    padding: 12px;
+}
+
+.login input {
+  box-sizing: border-box;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-size: 0.95em;
+}
+.email,
+.password {
+  background: #fff;
+  border-color: #bbb;
+  color: #555;
+}
+
+.submit {
+  background: rgb(1, 29, 51);
+  color: #fff;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background: #17c;
+}
+

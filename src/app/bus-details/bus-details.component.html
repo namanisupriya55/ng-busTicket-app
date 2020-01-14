@@ -1,0 +1,8 @@
+<h1> Details of {{name}}</h1>
+<div *ngFor="let bus of data.buses">
+    <div *ngIf="bus.busName == name" >
+      <div>Bus Name: {{bus.busName}}</div>
+      <div>Source: {{bus.source}}</div>
+      <div>destination: {{bus.destination}}</div>
+    </div>
+</div>

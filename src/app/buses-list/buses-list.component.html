@@ -1,0 +1,12 @@
+
+<!--<div class="busSearch">-->
+<!-- <div class="dropdown">-->
+<!--  <app-places-dropdown></app-places-dropdown>-->
+<!-- </div>-->
+<div>
+ <h2>buses-list</h2>
+ <div *ngFor="let bus  of buses">
+  <button [routerLink]="['/bus',bus.busName]" >{{bus.busName}}</button>
+ </div>
+</div>
+<!--</div>-->

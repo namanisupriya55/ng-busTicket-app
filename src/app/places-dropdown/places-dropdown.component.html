@@ -1,0 +1,37 @@
+
+<div class="busSearch">
+  <div class="dropdown">
+<div class="dropdown">
+  <div class="loginhead">
+   <label class="heading-font"> BOOK
+      <span class="heading-font">YOUR TICKET</span>
+   </label>
+  </div>
+ <form [formGroup]="sourceForm" style="width: 100%;height: 40%">
+   <label style="padding: 6%">From :</label>
+   <select  formControlName="source">
+     <option disabled>Select Source</option>
+     <option>Select Source</option>
+     <option *ngFor="let place of places">{{place}}</option>
+   </select>
+   <label style="padding: 8%">TO :</label>
+   <select class="" formControlName="destination">
+     <option disabled>Select Destination</option>
+     <option>Select Destination</option>
+     <option *ngFor="let place of places">{{place}}</option>
+   </select>
+   <p class= "error" *ngIf=" sourceForm.hasError('notUnique')" >Source and destination cannot be same</p>
+   <label style="padding: 6%">DATE :</label>
+   <mat-form-field>
+     <input matInput [min]="minDate" [max]="maxDate"  [matDatepicker]="picker" placeholder="Choose a date" (dateInput)="addEvent('input', $event)" (dateChange)="addEvent('change', $event)">
+     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+     <mat-datepicker #picker></mat-datepicker>
+   </mat-form-field>
+ </form>
+  <input class="submit" type="submit" (click)="submit()">
+</div>
+  </div>
+</div>
+
+
+
