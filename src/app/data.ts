@@ -1,6 +1,6 @@
 import {formatDate} from '@angular/common';
 
-export const data = {
+export let data = {
      buses: [
     {
         busId: 1,

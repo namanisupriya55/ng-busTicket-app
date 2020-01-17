@@ -35,7 +35,7 @@
 }
 .dropdown select {
   font: 400 18px sans-serif;
-  -webkit-appearance: none;
+  /*-webkit-appearance: none;*/
   border: 1px solid;
   width: 66%;
   height: 2em;

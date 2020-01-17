@@ -9,8 +9,9 @@ import { BusesListComponent } from './buses-list/buses-list.component';
 import { LoginComponent } from './login/login.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MaterialModule } from './material.module';
-
-
+import {BusesDataServiceService} from './buses-data-service.service';
+import { BusInfoComponent } from './bus-info/bus-info.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,15 +21,17 @@ import { MaterialModule } from './material.module';
     BusDetailsComponent,
     BusesListComponent,
     LoginComponent,
+    BusInfoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [BusesDataServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

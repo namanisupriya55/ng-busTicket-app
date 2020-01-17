@@ -1,12 +1,15 @@
 
-<!--<div class="busSearch">-->
-<!-- <div class="dropdown">-->
-<!--  <app-places-dropdown></app-places-dropdown>-->
-<!-- </div>-->
-<div>
- <h2>buses-list</h2>
- <div *ngFor="let bus  of buses">
-  <button [routerLink]="['/bus',bus.busName]" >{{bus.busName}}</button>
+<div style="width:80%;height:100%">
+ <div Class="busesList">BUSES LIST</div>
+ <div class="header">
+ <div id="leftbox" >BUS NAME</div>
+ <div id="middlebox">NO OF SEATS</div>
+  <div style="width:20%"> SOURCE </div>
+  <div style="width:20%"> DESTINATION </div>
+ <div id="rightbox">DATE</div>
+ </div>
+ <div *ngFor="let bus  of buses" class="busInfoCard" style="">
+  <app-bus-info [routerLink]="['/bus',bus.busName]" [busDetails]="bus"></app-bus-info>
  </div>
 </div>
-<!--</div>-->
+

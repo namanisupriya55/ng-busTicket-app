@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import { PlacesDropdownComponent } from '../places-dropdown/places-dropdown.component';
-import { data } from '../data';
 
 @Component({
   selector: 'app-buses-list',
@@ -11,7 +9,6 @@ export class BusesListComponent implements OnInit {
 
   constructor() {
   }
-  data = data;
   buses: [];
 
   ngOnInit() {
